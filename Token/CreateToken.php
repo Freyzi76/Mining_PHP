@@ -21,7 +21,7 @@ for ($a = $argv[1]; $a <= $argv[2]; $a++) {
                     
     $DB->insert("INSERT INTO token (id, hash, owner, oldowner) VALUES 
                     (?, ?, ?, ?)", 
-                    array($a, "NWS@" . $TokenKey, "NOOWNER", "NOOWNER")
+                    array($a, "NWS@" . $a . "@" . $TokenKey, "NOOWNER", "NOOWNER")
                 );
     
     echo $a . PHP_EOL;
